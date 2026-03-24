@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Expense Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Expense Tracker</h1>
+  <h2>Balance: ₹<span id="balance">0</span></h2>
+
+  <div class="summary">
+    <h3>Income: ₹<span id="income">0</span></h3>
+    <h3>Expense: ₹<span id="expense">0</span></h3>
+  </div>
+</div>
+
+<div class="main-layout">
+  <div class="left">   
+<form id="form">
+<input type="text" id="text" placeholder="Description" required>
+<input type="number" id="amount" placeholder="Amount" required>
+
+<input type="date" id="date" required>
+
+<div class="btn-group">
+<button type="button" name="" id="incomeBtn">Add Income</button>
+<button type="button"id="expenseBtn"> Add Expense</button>
+</div>
+</form>
+
+<h3>Transactions</h3>
+<ul id="list"></ul>
+
+<button id="exportBtn">Export CSV</button>
+<button id="clearBtn">Clear All</button>
+  </div>
+
+  <div class="right chart-container">
+<h3>Income vs Expense</h3>
+<canvas id="expenseChart"></canvas>
+  </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

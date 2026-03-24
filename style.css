@@ -1,0 +1,218 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #eef2f7;
+  color: #333;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  margin-bottom: 5px;
+}
+
+.summary {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* LAYOUT */
+.main-layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARDS */
+.left, .right {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 1;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+  text-align: center;
+}
+
+/* FORM */
+form input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+form input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* BUTTON GROUP */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* BUTTONS */
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: 0.2s;
+}
+
+/* PRIMARY BUTTONS */
+#incomeBtn {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+}
+
+#expenseBtn {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+}
+
+/* SECONDARY BUTTONS */
+#exportBtn, #clearBtn {
+  background: #64748b;
+}
+
+/* HOVER EFFECT */
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* TRANSACTIONS */
+#list {
+  list-style: none;
+  margin-top: 15px;
+}
+
+#list li {
+  background: #f9fafb;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+
+#list li {
+  flex-direction: row;
+}
+
+#list li div:first-child {
+  line-height: 1.4;
+}
+
+#list strong {
+  font-size: 15px;
+}
+
+#list small {
+  color: #64748b;
+}
+
+/* HOVER */
+#list li:hover {
+  background: #f1f5f9;
+  transform: scale(1.01);
+}
+
+/* INCOME / EXPENSE BORDER */
+li.income {
+  border-left: 6px solid #16a34a;
+}
+
+li.expense {
+  border-left: 6px solid #dc2626;
+}
+
+/* AMOUNT HIGHLIGHT */
+.amount {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* ACTION BUTTONS INSIDE LIST */
+li button {
+  margin-left: 5px;
+  padding: 5px 8px;
+  font-size: 12px;
+  background: #475569;
+}
+
+.edit-btn {
+  background: #3b82f6;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+/* ACTION AREA */
+.actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* CHART FIX */
+canvas {
+  max-width: 100%;
+  max-height: 300px; 
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .right {
+    position: static;
+  }
+}
+
+.left > *:not(:last-child) {
+  margin-bottom: 15px;
+}
